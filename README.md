@@ -2,7 +2,11 @@
 
 리엑트 18의 웹팩과 바벨 수동 설치 및 설정 공부 레파지토리입니다.
 
-- reference: https://juni-official.tistory.com/248
+- reference
+  - https://juni-official.tistory.com/248
+  - https://mine-it-record.tistory.com/503
+
+# Webpack의 개념
 
 # 패키지 생성 및 설치
 
@@ -45,4 +49,13 @@ npm i -D @babel/core @babel/preset-env @babel/preset-react
 
 ```bash
 npm i -D @pmmmwh/react-refresh-webpack-plugin
+```
+
+### plugin-transform-runtime
+
+바벨 폴리필 설정
+
+```bash
+npm i -D @babel/plugin-transform-runtime
+npm i @babel/runtime-corejs3
 ```

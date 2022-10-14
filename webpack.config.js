@@ -19,6 +19,7 @@ const config = {
   name: "React18-webpack-babel-setting", // 설정 이름
   mode: "development", // production, development // 설정 모드
   devtool: "eval",
+  target: ["web", "es5"], // es5 기능 사용
   entry: {
     app: "./src/index.js",
   },
@@ -34,7 +35,7 @@ const config = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            // presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
@@ -62,13 +63,12 @@ const config = {
     new ReactRefreshWebpackPlugin(),
   ],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "app.js",
     publicPath: "/",
   },
   devServer: {
     // 개발 서버 설정
-    // static: "./dist",
     port: 3000,
     hot: true, // 핫 모듈 교체(HMR) 활성화
     compress: true, // 압축 유무
